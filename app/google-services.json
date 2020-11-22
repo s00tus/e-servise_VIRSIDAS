@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "384062212903",
+    "firebase_url": "https://eservice-bb7ff.firebaseio.com",
+    "project_id": "eservice-bb7ff",
+    "storage_bucket": "eservice-bb7ff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:384062212903:android:9ec1c1b7aeafc74c41b702",
+        "android_client_info": {
+          "package_name": "com.tusdwi.virsidas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "384062212903-slq870262u0mtq9ueu9oqq5cnvs0skgt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaQKMJBtCEOTzEG08_Vica87w0oVttMCA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "384062212903-slq870262u0mtq9ueu9oqq5cnvs0skgt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

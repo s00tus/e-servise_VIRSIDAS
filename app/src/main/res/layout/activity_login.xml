@@ -7,6 +7,17 @@
     android:background="#859DB9"
     tools:context=".Login">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="400dp"
+            android:background="@drawable/path" />
+    </RelativeLayout>
 
     <ImageView
         android:id="@+id/icon"
@@ -27,7 +38,7 @@
         android:layout_marginTop="12dp"
         android:fontFamily="monospace"
         android:text="VIRSIDAS"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/merah"
         android:textSize="30sp"
 
 
@@ -39,9 +50,9 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="380dp"
-        android:layout_height="380dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:layout_marginTop="44dp"
         android:src="@drawable/login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -61,36 +72,33 @@
         android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.171"
+        app:layout_constraintHorizontal_bias="0.411"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text1"
         tools:ignore="MissingConstraints" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/text_input"
-        android:layout_width="356dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="36dp"
-        android:background="@drawable/buttonlogin"
-        app:startIconDrawable="@drawable/ic_baseline_account_box"
-        android:textColorHint="#FFFFFF"
+        android:layout_width="250dp"
+        android:layout_height="62dp"
+        android:textColorHint="#493535"
         app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text"
         tools:ignore="MissingConstraints">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <EditText
             android:id="@+id/username"
-            android:layout_width="320dp"
+            android:layout_width="250dp"
             android:layout_height="51dp"
-            android:layout_marginLeft="20dp"
             android:layout_marginTop="28dp"
             android:fontFamily="monospace"
             android:hint="Username"
+            android:importantForAutofill="no"
             android:inputType="textPersonName"
-            android:textColorHint="#FFFFFF"
-            android:textColor="#FFFFFF"
+            android:padding="16dp"
+            android:textColorHint="#493535"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.507"
             app:layout_constraintStart_toStartOf="parent"
@@ -100,31 +108,27 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
-        android:layout_width="356dp"
-        android:layout_height="65dp"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
         android:layout_marginTop="36dp"
-        android:background="@drawable/buttonlogin"
-        app:startIconDrawable="@drawable/ic_baseline_https_24"
-        android:textColorHint="#FFFFFF"
+        android:textColorHint="#493535"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_input"
         app:passwordToggleEnabled="true"
         tools:ignore="MissingConstraints">
-
-        <com.google.android.material.textfield.TextInputEditText
+        <EditText
             android:id="@+id/password"
-            android:layout_width="320dp"
+            android:layout_width="250dp"
             android:layout_height="51dp"
-            android:layout_marginLeft="20dp"
             android:layout_marginTop="48dp"
-            android:textColorHint="#FFFFFF"
+            android:autofillHints=""
             android:fontFamily="monospace"
             android:hint="Password"
             android:importantForAutofill="no"
             android:inputType="textPassword"
             android:padding="16dp"
-            android:textColor="#FFFFFF" />
+            android:textColor="#493535" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
@@ -134,7 +138,7 @@
         android:layout_marginTop="16dp"
         android:fontFamily="monospace"
         android:text="Forgot password?"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/putih"
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -152,7 +156,7 @@
         android:fontFamily="monospace"
         android:onClick="LOGIN"
         android:text="Login"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/merah"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
