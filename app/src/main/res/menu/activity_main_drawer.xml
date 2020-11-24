@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="Home" />
+        <item
+            android:id="@+id/profil"
+            android:icon="@drawable/ic_baseline_person_24"
+            android:title="Profil" />
+
+        <item
+            android:id="@+id/forum"
+            android:icon="@drawable/ic_baseline_forum_24"
+            android:title="Forum" />
+
+        <item
+            android:id="@+id/absen"
+            android:icon="@drawable/ic_baseline_assignment_24"
+            android:title="Absen" />
+
+        <item
+            android:id="@+id/raport"
+            android:icon="@drawable/ic_baseline_storage_24"
+            android:title="Raport Siswa" />
+
+            </group>
+
+
+    <item android:title="Lainnya">
+        <menu>
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_baseline_exit_to_app_24"
+                android:title="Log Out" />
+        </menu>
+    </item>
+
+</menu>

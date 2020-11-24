@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#859DB9"
+    tools:context=".Registrasi">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="400dp"
+            android:background="@drawable/path" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="8dp"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="348dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="44dp"
+                android:fontFamily="monospace"
+                android:padding="16dp"
+                android:text="Registrasi"
+                android:textColor="#493535"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text1"
+                tools:ignore="MissingConstraints" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout"
+                android:layout_width="350dp"
+                android:layout_height="62dp"
+                android:layout_marginTop="10dp"
+                android:textColorHint="#493535"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text"
+                app:startIconDrawable="@drawable/ic_baseline_person_24"
+                tools:ignore="MissingConstraints">
+
+            <EditText
+                android:id="@+id/registerName"
+                android:layout_width="350dp"
+                android:layout_height="51dp"
+                android:background="@drawable/inputloginnnn"
+                android:ems="10"
+                android:hint="Nama Lengkap"
+                android:textColorHint="#493535"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout1"
+                android:layout_width="350dp"
+                android:layout_height="62dp"
+                android:layout_marginTop="10dp"
+                android:textColorHint="#493535"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+                app:startIconDrawable="@drawable/ic_baseline_email_24"
+                tools:ignore="MissingConstraints">
+
+            <EditText
+                android:id="@+id/registerEmail"
+                android:layout_width="350dp"
+                android:layout_height="51dp"
+                android:background="@drawable/inputloginnnn"
+                android:ems="10"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/merah"
+                android:textColorHint="@color/merah"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout2"
+                android:layout_width="350dp"
+                android:layout_height="62dp"
+                android:layout_marginTop="10dp"
+                android:textColorHint="#493535"
+                app:passwordToggleEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout1"
+                app:startIconDrawable="@drawable/ic_baseline_https_24"
+                tools:ignore="MissingConstraints">
+
+            <EditText
+                android:id="@+id/registerPassword"
+                android:layout_width="350dp"
+                android:layout_height="51dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/inputloginnnn"
+                android:ems="10"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:textColor="@color/merah"
+                android:textColorHint="@color/merah"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout3"
+                android:layout_width="350dp"
+                android:layout_height="62dp"
+                android:layout_marginTop="10dp"
+                android:textColorHint="#493535"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
+                app:startIconDrawable="@drawable/ic_baseline_local_phone_24"
+                tools:ignore="MissingConstraints">
+            <EditText
+                android:id="@+id/registerPhone"
+                android:layout_width="350dp"
+                android:layout_height="51dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/inputloginnnn"
+                android:ems="10"
+                android:hint="No. Handphone"
+                android:inputType="phone"
+                android:textColor="@color/merah"
+                android:textColorHint="@color/merah"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <CheckBox
+                android:id="@+id/isTeacher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="8dp"
+                android:text="Guru"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
+
+            <CheckBox
+                android:id="@+id/isStudent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="5dp"
+                android:text="Siswa"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/isTeacher"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <Button
+        android:id="@+id/registerBtn"
+        android:layout_width="146dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/buttonlogin"
+        android:textColor="@color/merah"
+        android:textStyle="bold"
+        android:text="registrasi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card" />
+
+    <TextView
+        android:id="@+id/login"
+        android:onClick="loginBtn"
+        android:layout_marginTop="20dp"
+        android:text="Sudah punya akun? LOGIN"
+        android:textColor="@color/putih"
+        android:fontFamily="monospace"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.762"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registerBtn"
+        tools:ignore="MissingConstraints,OnClick,UseSwitchCompatOrMaterialXml"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

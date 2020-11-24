@@ -131,13 +131,16 @@
             android:textColor="#493535" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/ForgotPassword"
-        android:layout_width="150dp"
-        android:layout_height="34dp"
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginEnd="65dp"
+        android:gravity="end"
         android:fontFamily="monospace"
-        android:text="Forgot password?"
+        android:text="Remember me"
         android:textColor="@color/putih"
         android:textSize="15sp"
         android:textStyle="bold"
@@ -145,16 +148,15 @@
         app:layout_constraintHorizontal_bias="0.762"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml" />
 
     <Button
-        android:id="@+id/btn_login"
+        android:id="@+id/loginBtn"
         android:layout_width="146dp"
         android:layout_height="51dp"
-        android:layout_marginTop="124dp"
+        android:layout_marginTop="104dp"
         android:background="@drawable/buttonlogin"
         android:fontFamily="monospace"
-        android:onClick="LOGIN"
         android:text="Login"
         android:textColor="@color/merah"
         android:textStyle="bold"
@@ -163,4 +165,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
         tools:ignore="NotSibling,OnClick" />
+
+    <TextView
+        android:id="@+id/gotoRegister"
+        android:onClick="registerBtn"
+        android:layout_marginTop="140dp"
+        android:text="Belum punya akun? DAFTAR"
+        android:textColor="@color/putih"
+        android:fontFamily="monospace"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.762"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        tools:ignore="MissingConstraints,OnClick,UseSwitchCompatOrMaterialXml"/>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

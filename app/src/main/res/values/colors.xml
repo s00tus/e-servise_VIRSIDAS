@@ -6,4 +6,5 @@
     <color name="merah">#ff0000</color>
     <color name="hitam">#000000</color>
     <color name="putih">#ffffff</color>
+    <color name="light">#dddddd</color>>
 </resources>
