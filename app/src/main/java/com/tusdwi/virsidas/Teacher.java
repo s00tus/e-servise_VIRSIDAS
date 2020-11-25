@@ -58,30 +58,6 @@ public class Teacher extends AppCompatActivity implements NavigationView.OnNavig
         }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_dawer_setting, menu);
-
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem menu) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = menu.getItemId();
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.users) {
-            Intent intent = new Intent(Teacher.this, MainActivity.class);
-            startActivity(intent);
-            Toast.makeText(Teacher.this, "Profil Guru", Toast.LENGTH_LONG).show();
-            return true;
-        }
-        return super.onOptionsItemSelected(menu);
-    }
-
 
     //navigasi
     @Override

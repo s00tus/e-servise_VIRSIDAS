@@ -3,11 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:icon="@drawable/ic_baseline_person_24"
-        android:id="@+id/users"
+        android:id="@+id/pengaturan"
         android:orderInCategory="100"
-        android:title="action settings"
-        app:showAsAction="ifRoom" />
+        android:title="Edit Profil"
+        app:showAsAction="never" />
 
-
+    <item
+        android:id="@+id/gantipassword"
+        android:orderInCategory="100"
+        android:title="Ubah Password"
+        app:showAsAction="never" />
 </menu>

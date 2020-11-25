@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,6 +30,7 @@ public class Registrasi extends AppCompatActivity {
     Button registerBtn;
     TextView loginBtn;
     boolean valid = true;
+    CheckBox Guru, Siswa;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
 
@@ -45,6 +48,26 @@ public class Registrasi extends AppCompatActivity {
         phone = findViewById(R.id.registerPhone);
         registerBtn = findViewById(R.id.registerBtn);
         loginBtn = findViewById(R.id.login);
+        Guru = findViewById(R.id.isTeacher);
+        Siswa = findViewById(R.id.isStudent);
+
+        Siswa.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (buttonView.isChecked()){
+                    Guru.setChecked(false);
+                }
+            }
+        });
+
+        Guru.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (buttonView.isChecked()){
+                    Siswa.setChecked(false);
+                }
+            }
+        });
 
         registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,6 +76,13 @@ public class Registrasi extends AppCompatActivity {
                 checkField(email);
                 checkField(password);
                 checkField(phone);
+
+                //checkbox
+                if (!(Guru.isChecked() || Siswa.isChecked())){
+                    Toast.makeText(Registrasi.this, "Pilih jenis akun", Toast.LENGTH_SHORT).show();
+                    return;
+
+                }
 
                 if (valid) {
                     fAuth.createUserWithEmailAndPassword(email.getText().toString(),
@@ -65,15 +95,28 @@ public class Registrasi extends AppCompatActivity {
                             Map<String, Object> userInfo = new HashMap<>();
                             userInfo.put("NamaLengkap", fullName.getText().toString());
                             userInfo.put("Email", email.getText().toString());
-                            userInfo.put("NomorHandphone", phone.getText().toString());
+                            userInfo.put("Password", password.getText().toString());
+                            userInfo.put("NoHandphone", phone.getText().toString());
 
                             //user
-                            userInfo.put("Student", "1");
+                            if(Guru.isChecked()){
+                                userInfo.put("Teacher", "1");
+                            }
+
+                            if(Siswa.isChecked()){
+                                userInfo.put("Student", "1");
+                            }
+
                             df.set(userInfo);
+                            if(Guru.isChecked()){
+                                startActivity(new Intent(getApplicationContext(), Teacher.class));
+                                finish();
+                            }
+                            if(Siswa.isChecked()){
+                                startActivity(new Intent(getApplicationContext(), Students.class));
+                                finish();
+                            }
 
-
-                            startActivity(new Intent(getApplicationContext(), Login.class));
-                            finish();
                         }
                     }).addOnFailureListener(new OnFailureListener() {
                         @Override
@@ -100,8 +143,8 @@ public class Registrasi extends AppCompatActivity {
             }
 
     public void loginBtn(View view) {
-        Intent data9 = new Intent(Registrasi.this, Login.class);
-        startActivity(data9);
+        Intent data = new Intent(Registrasi.this, Login.class);
+        startActivity(data);
 
     }
 }

@@ -65,11 +65,8 @@ public class Login extends AppCompatActivity {
                         @Override
                         public void onFailure(@NonNull Exception e) {
                             Toast.makeText(Login.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-
                         }
                     });
-
-
                 }
 
             }
@@ -120,9 +117,31 @@ public class Login extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        if (FirebaseAuth.getInstance().getCurrentUser() !=null){
-            startActivity(new Intent(getApplicationContext(), Teacher.class));
-            finish();
+        if (FirebaseAuth.getInstance().getCurrentUser() !=null) {
+            DocumentReference df = FirebaseFirestore.getInstance().collection("Users").document(FirebaseAuth.getInstance().getCurrentUser().getUid());
+            df.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                @Override
+                public void onSuccess(DocumentSnapshot documentSnapshot) {
+                    if (documentSnapshot.getString("Teacher") != null){
+                        startActivity(new Intent(getApplicationContext(), Teacher.class));
+                        finish();
+                    }
+
+                    if (documentSnapshot.getString("Student") != null){
+                        startActivity(new Intent(getApplicationContext(), Students.class));
+                        finish();
+                    }
+
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    FirebaseAuth.getInstance().signOut();
+                    startActivity(new Intent(getApplicationContext(), Login.class));
+                    finish();
+
+                }
+            });
         }
     }
 }
